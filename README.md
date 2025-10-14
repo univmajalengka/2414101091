@@ -43,5 +43,5 @@ Repository ini dibuat khusus untuk:
 ---
 
 <p align="center">
-  ✍️ Dibuat dengan semangat belajar oleh <b>Muhamad Haisyam Khairizmi</b>  
+  ✍️ Dibuat dengan semangat belajar oleh: <b>Muhamad Haisyam Khairizmi</b>  
 </p>
