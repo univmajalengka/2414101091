@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Situ Cipanten Majalengka</title>
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-900">
+    <header
+      id="beranda"
+      class="relative bg-gradient-to-br from-emerald-600 to-green-700 text-white"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between"
+      >
+        <div>
+          <p class="text-xs uppercase tracking-[0.4em] text-emerald-200">
+            Wisata Alam Majalengka
+          </p>
+          <h1 class="text-2xl md:text-3xl font-semibold">Situ Cipanten</h1>
+        </div>
+        <a
+          href="tel:+62233123456"
+          class="hidden md:inline-flex px-4 py-2 rounded-full bg-white/20 hover:bg-white/30 transition"
+          >Hubungi Kami</a
+        >
+      </div>
+      <nav class="bg-white/15">
+        <div class="max-w-6xl mx-auto px-6 py-3">
+          <div class="flex items-center justify-between md:hidden">
+            <p class="text-xs uppercase tracking-[0.4em] text-white/80">Menu</p>
+            <button
+              id="navToggle"
+              class="inline-flex items-center gap-2 rounded-full border border-white/50 px-4 py-2 text-sm font-semibold"
+              aria-expanded="false"
+            >
+              Navigasi
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+          <ul
+            id="navMenu"
+            class="mt-3 grid grid-cols-2 gap-3 text-sm uppercase tracking-wide text-white/90 hidden md:mt-0 md:flex md:flex-wrap md:gap-6"
+          >
+            <li>
+              <a
+                class="block rounded-full px-3 py-2 hover:bg-white/20"
+                href="#beranda"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a
+                class="block rounded-full px-3 py-2 hover:bg-white/20"
+                href="#about"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="block rounded-full px-3 py-2 hover:bg-white/20"
+                href="#obyek"
+                >Obyek Wisata</a
+              >
+            </li>
+            <li>
+              <a
+                class="block rounded-full px-3 py-2 hover:bg-white/20"
+                href="#fasilitas"
+                >Fasilitas Wisata</a
+              >
+            </li>
+            <li>
+              <a
+                class="block rounded-full px-3 py-2 hover:bg-white/20"
+                href="#paket"
+                >Paket Wisata</a
+              >
+            </li>
+            <li>
+              <a
+                class="block rounded-full px-3 py-2 hover:bg-white/20"
+                href="#museum"
+                >Museum Salak</a
+              >
+            </li>
+            <li>
+              <a
+                class="block rounded-full px-3 py-2 hover:bg-white/20"
+                href="#pemesanan"
+                >Pemesanan</a
+              >
+            </li>
+            <li>
+              <a
+                class="block rounded-full px-3 py-2 hover:bg-white/20"
+                href="#galeri"
+                >Galery</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div
+        class="max-w-6xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row gap-8 items-center"
+      >
+        <div class="md:w-1/2 space-y-4">
+          <p class="text-emerald-200 text-sm tracking-[0.5em] uppercase">
+            Eksplorasi Alam Asri
+          </p>
+          <h2 class="text-3xl md:text-5xl font-semibold leading-tight">
+            Situ Cipanten
+          </h2>
+          <p class="text-white/90">
+            Rasakan ketenangan perahu kayu, warna air yang memantulkan
+            pepohonan, dan pengalaman wisata yang hangat bersama warga Desa
+            Gunung Kuning. Mulai dari paket jelajah dan kuliner tradisional
+            hingga aktivitas foto bawah air, semua siap menyambutmu.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#paket"
+              class="px-6 py-3 bg-white text-emerald-700 font-semibold rounded-full shadow-lg shadow-emerald-900/30"
+              >Lihat Paket</a
+            >
+            <a
+              href="#video"
+              class="px-6 py-3 border border-white/60 rounded-full hover:bg-white/10 transition"
+              >Tonton Video</a
+            >
+          </div>
+        </div>
+        <div class="md:w-1/2 w-full">
+          <div class="grid grid-cols-2 gap-4">
+            <figure
+              class="relative h-48 md:h-60 rounded-3xl border border-white/40 shadow-2xl overflow-hidden"
+            >
+              <img
+                src="images/1.jpg"
+                alt="Perahu wisata Situ Cipanten"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <figure
+              class="relative h-48 md:h-72 rounded-3xl border border-white/40 shadow-2xl overflow-hidden translate-y-6"
+            >
+              <img
+                src="images/2.webp"
+                alt="Air hijau tosca Cisitu"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <figure
+              class="relative h-48 md:h-72 rounded-3xl border border-white/40 shadow-2xl overflow-hidden -translate-y-6"
+            >
+              <img
+                src="images/3.jpg"
+                alt="Pinus Majalengka"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <figure
+              class="relative h-48 md:h-60 rounded-3xl border border-white/40 shadow-2xl overflow-hidden translate-y-4"
+            >
+              <img
+                src="images/4.webp"
+                alt="Pengunjung menikmati dermaga"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div
+        id="about"
+        class="relative z-20 mx-auto mt-8 w-11/12 max-w-5xl rounded-3xl bg-white text-slate-900 shadow-2xl grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x md:absolute md:mt-0 md:left-1/2 md:top-full md:-translate-x-1/2 md:-translate-y-8"
+      >
+        <div class="p-6">
+          <p class="text-sm text-emerald-500 font-semibold">Lokasi</p>
+          <p class="text-lg font-medium">
+            Desa Gunung Kuning, Sindang, Majalengka
+          </p>
+        </div>
+        <div class="p-6">
+          <p class="text-sm text-emerald-500 font-semibold">Jam Operasional</p>
+          <p class="text-lg font-medium">Setiap hari 07.00 – 17.00 WIB</p>
+        </div>
+        <div class="p-6">
+          <p class="text-sm text-emerald-500 font-semibold">Reservasi</p>
+          <p class="text-lg font-medium">Whatsapp 0822-6260-0744</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="mt-16 md:mt-40 space-y-24">
+      <section id="obyek" class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-emerald-500">
+              Obyek Wisata
+            </p>
+            <h3 class="text-3xl font-semibold mt-2 mb-4">
+              Galeri Pesona Situ Cipanten
+            </h3>
+            <p class="text-slate-600">
+              Kolam alami dengan air berwarna hijau tosca ini memadukan
+              keheningan alam dan aktivitas kreatif seperti bersepeda air,
+              perahu dayung, serta spot foto bawah air. Nikmati suasana sejuk
+              pepohonan pinus sambil mendengar gemericik air.
+            </p>
+          </div>
+          <div
+            id="galeri"
+            class="grid grid-cols-2 gap-3 rounded-3xl border border-emerald-100 p-3 bg-emerald-50"
+          >
+            <img
+              src="images/1.jpg"
+              alt="Kolam alami"
+              class="rounded-2xl w-full h-40 object-cover"
+            />
+            <img
+              src="images/2.webp"
+              alt="Perahu kayu"
+              class="rounded-2xl w-full h-40 object-cover"
+            />
+            <img
+              src="images/3.jpg"
+              alt="Danau hijau"
+              class="rounded-2xl w-full h-40 object-cover"
+            />
+            <img
+              src="images/4.webp"
+              alt="Pinus Majalengka"
+              class="rounded-2xl w-full h-40 object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="fasilitas" class="bg-emerald-50/80 py-16">
+        <div class="max-w-6xl mx-auto px-6">
+          <p class="text-sm uppercase tracking-[0.3em] text-emerald-500">
+            Fasilitas Wisata
+          </p>
+          <h3 class="text-3xl font-semibold mt-2 mb-6">
+            Lengkap untuk Liburan Nyaman
+          </h3>
+          <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div
+              class="p-5 rounded-2xl bg-white shadow border border-emerald-100"
+            >
+              <p class="font-semibold text-lg">Gazebo & Spot Foto</p>
+              <p class="text-sm text-slate-600 mt-2">
+                Unik di atas air, cocok untuk konten Instagram.
+              </p>
+            </div>
+            <div
+              class="p-5 rounded-2xl bg-white shadow border border-emerald-100"
+            >
+              <p class="font-semibold text-lg">Kuliner Lokal</p>
+              <p class="text-sm text-slate-600 mt-2">
+                Paket makan siang khas Majalengka.
+              </p>
+            </div>
+            <div
+              class="p-5 rounded-2xl bg-white shadow border border-emerald-100"
+            >
+              <p class="font-semibold text-lg">Pusat Informasi</p>
+              <p class="text-sm text-slate-600 mt-2">
+                Pemandu wisata ramah dan siap membantu.
+              </p>
+            </div>
+            <div
+              class="p-5 rounded-2xl bg-white shadow border border-emerald-100"
+            >
+              <p class="font-semibold text-lg">Area Camping</p>
+              <p class="text-sm text-slate-600 mt-2">
+                Tersedia paket glamping dengan tenda premium.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="paket" class="max-w-6xl mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row md:items-end md:justify-between gap-4"
+        >
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-emerald-500">
+              Paket Wisata
+            </p>
+            <h3 class="text-3xl font-semibold mt-2">
+              Pilih Pengalaman Favoritmu
+            </h3>
+            <p class="text-slate-600 mt-2">
+              Setiap paket sudah termasuk tiket masuk, dokumentasi foto, dan
+              pemandu lokal.
+            </p>
+          </div>
+          <a
+            id="pemesanan"
+            href="https://wa.me/628111234567"
+            class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-emerald-600 text-white font-semibold shadow-lg"
+            >Pesan Sekarang</a
+          >
+        </div>
+        <div class="mt-10 grid md:grid-cols-3 gap-8">
+          <article
+            class="rounded-3xl border border-emerald-100 shadow-lg overflow-hidden"
+          >
+            <img
+              src="images/2.webp"
+              alt="Paket Jelajah Situ Cipanten"
+              class="h-64 w-full object-cover"
+            />
+            <div class="p-6 space-y-3">
+              <p class="text-sm text-emerald-500 font-semibold">
+                17 Februari 2025
+              </p>
+              <h4 class="text-2xl font-semibold">
+                Paket Dayung Menyusuri Situ Cipanten
+              </h4>
+              <p class="text-slate-600">
+                Nikmati sensasi menaiki perahu kayu dan berkeliling danau jernih
+                bersama pemandu lokal.
+              </p>
+              <p class="font-semibold text-lg text-emerald-600">
+                Tiket rombongan 10 orang hanya 150rb
+              </p>
+            </div>
+          </article>
+          <article
+            class="rounded-3xl border border-emerald-100 shadow-lg overflow-hidden"
+          >
+            <img
+              src="images/5.jpeg"
+              alt="Paket Trekking Pinus"
+              class="h-64 w-full object-cover"
+            />
+            <div class="p-6 space-y-3">
+              <p class="text-sm text-emerald-500 font-semibold">
+                Setiap Akhir Pekan
+              </p>
+              <h4 class="text-2xl font-semibold">
+                Paket Ayunan Situ Cipanten & Foto Gratis
+              </h4>
+              <p class="text-slate-600">
+                Coba ayunan dengan latar danau hijau, ukir momen dengan sesi
+                foto gratis dari tim kami.
+              </p>
+              <p class="font-semibold text-lg text-emerald-600">
+                Tiket 1 ayunan Rp10.000 per orang
+              </p>
+            </div>
+          </article>
+          <article
+            class="rounded-3xl border border-emerald-100 shadow-lg overflow-hidden"
+          >
+            <img
+              src="images/6.jpg"
+              alt="Paket Jelajah Desa Wisata"
+              class="h-64 w-full object-cover"
+            />
+            <div class="p-6 space-y-3">
+              <p class="text-sm text-emerald-500 font-semibold">
+                25 Februari 2025
+              </p>
+              <h4 class="text-2xl font-semibold">
+                Paket Sepeda Gantung di Atas Danau
+              </h4>
+              <p class="text-slate-600">
+                Bersepeda di lintasan gantung menyusuri lanskap hijau Situ
+                Cipanten, cocok untuk foto menegangkan namun aman.
+              </p>
+              <p class="font-semibold text-lg text-emerald-600">
+                Tiket 1 orang Rp20.000 termasuk dokumentasi
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="museum"
+        class="max-w-6xl mx-auto px-6 py-16 rounded-3xl bg-gradient-to-r from-emerald-100 to-white border border-emerald-100"
+      >
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-emerald-500">
+              Wisata Edukasi
+            </p>
+            <h3 class="text-3xl font-semibold mt-3">Cerita Situ Cipanten</h3>
+            <p class="text-slate-600 mt-3">
+              Kenali sejarah dan konservasi Situ Cipanten, pahami peran warga
+              lokal dalam menjaga kejernihan air, dan ikuti tur singkat mengenai
+              flora-fauna endemik di sekitarnya.
+            </p>
+          </div>
+          <div
+            id="video"
+            class="aspect-video rounded-2xl overflow-hidden shadow-lg"
+          >
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/HepVRof4t3E"
+              title="Video Edukasi Situ Cipanten"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-900 text-white mt-20">
+      <div
+        class="max-w-6xl mx-auto px-6 py-10 flex flex-col gap-6 md:flex-row md:items-center justify-between"
+      >
+        <div>
+          <p class="text-sm uppercase tracking-[0.3em] text-emerald-300">
+            Situ Cipanten
+          </p>
+          <p class="text-lg font-semibold">
+            Desa Gunung Kuning, Sindang, Majalengka
+          </p>
+        </div>
+        <p class="text-sm text-white/70">
+          &copy; 2025 Situ Cipanten Experience. Seluruh hak cipta dilindungi.
+        </p>
+      </div>
+    </footer>
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+      if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+          const expanded = navToggle.getAttribute("aria-expanded") === "true";
+          navToggle.setAttribute("aria-expanded", (!expanded).toString());
+          navMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
+  </body>
+</html>
