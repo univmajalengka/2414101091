@@ -1,0 +1,34 @@
+1. Parse error karena variabel tanpa tanda `$`
+   - File/Baris  : proses-pendaftaran-2.php:13
+   - Pesan Error : `Parse error: syntax error, unexpected '=' in proses-pendaftaran-2.php on line 13`
+   - Jenis       : Syntax error
+   - Penyebab    : Penulisan `sekolah = $_POST['sekolah_asal'];` tanpa awalan `$` membuat PHP mengira `sekolah` adalah konstanta sehingga interpreter berhenti dengan parse error sebelum query dijalankan.
+   - Perbaikan   : Tambahkan awalan `$` dan pastikan variabel diinisialisasi, misalnya `$sekolah = trim($_POST['sekolah_asal'] ?? '');`.
+
+2. Query langsung tanpa prepared statement rawan SQL Injection
+   - File/Baris  : proses-pendaftaran-2.php:15-17 (kode asli)
+   - Pesan Error : Tidak muncul di browser dalam kondisi normal, tetapi kerentanan ini memungkinkan penyerang menyisipkan perintah SQL tambahan sehingga data bisa bocor/hapus.
+   - Jenis       : Security / Logic error
+   - Penyebab    : Nilai dari form langsung disisipkan ke string SQL `INSERT ... VALUE ('$nama', ...)` tanpa proses escaping otomatis; karakter `'` akan memecah query dan dapat dimanfaatkan untuk injection.
+   - Perbaikan   : Gunakan prepared statement `mysqli_prepare` + `mysqli_stmt_bind_param` sehingga driver MySQL menangani escaping dan query aman dijalankan.
+
+3. Tidak ada validasi server-side terhadap field wajib
+   - File/Baris  : proses-pendaftaran-2.php:8-14 (kode asli)
+   - Pesan Error : `mysqli_stmt_execute()` / `mysqli_query()` dapat gagal atau menyimpan string kosong; ketika field dari form dikosongkan, database tetap menerima data tidak valid dan aplikasi sulit diaudit.
+   - Jenis       : Logic / Data validation error
+   - Penyebab    : Nilai `$_POST` langsung dipakai tanpa memastikan isian lengkap, sehingga baris pendaftaran bisa tercatat dengan data kosong atau menyebabkan constraint DB gagal (jika ada NOT NULL) dan menampilkan pesan "Query gagal disiapkan/eksekusi".
+   - Perbaikan   : Trim setiap input dan hentikan proses (redirect kembali ke form) apabila ada field yang kosong sebelum eksekusi query.
+
+4. DOCTYPE HTML tidak valid
+   - File/Baris  : form-daftar.php:1
+   - Pesan Error : Browser dev tools menunjukkan peringatan “Quirks Mode” karena baris pertama hanya `<DOCTYPE >` tanpa `!` dan nama dokumen, sehingga layout bisa dirender berbeda di tiap browser.
+   - Jenis       : Markup / Compatibility error
+   - Penyebab    : Penulisan DOCTYPE tidak mengikuti standar `<!DOCTYPE html>`, menyebabkan browser masuk ke quirks mode.
+   - Perbaikan   : Ganti baris pertama menjadi `<!DOCTYPE html>` untuk memaksa standards mode modern.
+
+5. Atribut `for` pada label tidak terhubung dengan elemen input
+   - File/Baris  : form-daftar.php:15-36 (kode asli)
+   - Pesan Error : Alat aksesibilitas seperti Lighthouse menandai “Form label does not have a matching control” dan klik label tidak memfokuskan field sehingga usability turun.
+   - Jenis       : Accessibility / UX bug
+   - Penyebab    : Input teks/textarea/select tidak punya atribut `id` sehingga label `for="nama"` dsb tidak menemukan pasangan.
+   - Perbaikan   : Tambahkan atribut `id` unik di setiap kontrol (misal `id="nama"`, `id="alamat"`, `id="agama"`) dan samakan nilainya dengan atribut `for` pada label.
